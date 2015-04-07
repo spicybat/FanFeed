@@ -7,5 +7,25 @@
     <string name="sport">Sport</string>
     <string name="team">Team</string>
     <string name="select_button">Select</string>
+    <string name="sport_prompt">Select a Sport</string>
+    <string name="team_prompt">Select a Team</string>
+    <string-array name="sport_type">
+        <item>NFL</item>
+        <item>NBA</item>
+        <item>NHL</item>
+        <item>MLB</item>
+    </string-array>
+    <string-array name="NFL">
+        <item>San Diego</item>
+    </string-array>
+    <string-array name="NBA">
+        <item>LA Lakers</item>
+    </string-array>
+    <string-array name="NHL">
+        <item>Ducks</item>
+    </string-array>
+    <string-array name="MLB">
+        <item>NY Yankees</item>
+    </string-array>
 
 </resources>

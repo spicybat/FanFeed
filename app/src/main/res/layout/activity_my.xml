@@ -47,17 +47,20 @@
         android:background="@null"/>
 
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/sport_spinner"
+        android:id="@+id/sSport"
+        android:entries="@array/sport_type"
+        android:prompt="@string/sport_prompt"
         android:layout_alignBottom="@id/Sport"
         android:layout_toRightOf="@id/Sport"
         />
 
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/team_spinner"
+        android:id="@+id/sTeam"
+        android:prompt="@string/team_prompt"
         android:layout_alignBottom="@+id/Team"
         android:layout_toRightOf="@+id/Team"
         />

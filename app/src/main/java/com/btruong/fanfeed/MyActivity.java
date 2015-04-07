@@ -2,35 +2,75 @@ package com.btruong.fanfeed;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class MyActivity extends Activity {
+public class MyActivity extends Activity implements AdapterView.OnItemSelectedListener {
+
+    private Spinner sport_spinner, team_spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+
+        addItemsOnSportSpinner();
+        addListenerOnSpinnerItemSelection();
+    }
+
+    public void addItemsOnSportSpinner(){
+        sport_spinner = (Spinner) findViewById(R.id.sSport);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.sport_type, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sport_spinner.setAdapter(adapter);
+    }
+
+    public void addListenerOnSpinnerItemSelection(){
+        Spinner sport_spinner = (Spinner) findViewById(R.id.sSport);
+        sport_spinner.setOnItemSelectedListener(this);
     }
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.my, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        if(adapterView.getItemAtPosition(i).toString().equals("NFL"))
+        {
+            team_spinner = (Spinner) findViewById(R.id.sTeam);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.NFL, android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            team_spinner.setAdapter(adapter);
         }
-        return super.onOptionsItemSelected(item);
+        else if(adapterView.getItemAtPosition(i).toString().equals("NBA"))
+        {
+            team_spinner = (Spinner) findViewById(R.id.sTeam);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.NBA, android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            team_spinner.setAdapter(adapter);
+        }
+        else if(adapterView.getItemAtPosition(i).toString().equals("NHL"))
+        {
+            team_spinner = (Spinner) findViewById(R.id.sTeam);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.NHL, android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            team_spinner.setAdapter(adapter);
+        }
+        else if(adapterView.getItemAtPosition(i).toString().equals("MLB"))
+        {
+            team_spinner = (Spinner) findViewById(R.id.sTeam);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.MLB, android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            team_spinner.setAdapter(adapter);
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
