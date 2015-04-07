@@ -9,6 +9,8 @@
     <string name="select_button">Select</string>
     <string name="sport_prompt">Select a Sport</string>
     <string name="team_prompt">Select a Team</string>
+    <string name="register">Regsiter</string>
+    <string name="edit_message">Edit a message</string>
     <string-array name="sport_type">
         <item>NFL</item>
         <item>NBA</item>
@@ -27,5 +29,8 @@
     <string-array name="MLB">
         <item>NY Yankees</item>
     </string-array>
+
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

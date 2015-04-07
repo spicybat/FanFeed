@@ -1,10 +1,12 @@
 package com.btruong.fanfeed;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -12,6 +14,7 @@ import java.util.List;
 
 
 public class MyActivity extends Activity implements AdapterView.OnItemSelectedListener {
+    public static String TEAM;
 
     private Spinner sport_spinner, team_spinner;
 
@@ -32,10 +35,16 @@ public class MyActivity extends Activity implements AdapterView.OnItemSelectedLi
     }
 
     public void addListenerOnSpinnerItemSelection(){
-        Spinner sport_spinner = (Spinner) findViewById(R.id.sSport);
+       // sport_spinner = (Spinner) findViewById(R.id.sSport);
         sport_spinner.setOnItemSelectedListener(this);
     }
 
+    public void goRegister(View view){
+        Intent intent = new Intent(this, RegisterActivity.class);
+        //intent.putExtra(TEAM, team_spinner );
+        TEAM=team_spinner.getSelectedItem().toString();
+        startActivity(intent);
+    }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

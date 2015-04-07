@@ -44,7 +44,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50sp"
         android:textColor="#ffffffff"
-        android:background="@null"/>
+        android:background="@null"
+        android:onClick="goRegister"
+        />
 
     <Spinner
         android:layout_width="fill_parent"
@@ -54,6 +56,8 @@
         android:prompt="@string/sport_prompt"
         android:layout_alignBottom="@id/Sport"
         android:layout_toRightOf="@id/Sport"
+        android:textColor="#ffffffff"
+        android:gravity="center"
         />
 
     <Spinner
@@ -63,6 +67,8 @@
         android:prompt="@string/team_prompt"
         android:layout_alignBottom="@+id/Team"
         android:layout_toRightOf="@+id/Team"
+        android:textColor="#ffffffff"
+        android:gravity="center"
         />
 
 </RelativeLayout>
