@@ -9,8 +9,57 @@
     tools:context=".MyActivity">
 
     <TextView
-        android:text="@string/hello_world"
+        android:text="@string/welcome_message"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome"
+        android:textSize="50sp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sport"
+        android:id="@+id/Sport"
+        android:textSize="50sp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/team"
+        android:id="@+id/Team"
+        android:textSize="50sp"
+        android:layout_below="@id/Sport" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_button"
+        android:textSize="30dp"
+        android:id="@+id/bSelect"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50sp"
+        android:textColor="#ffffffff"
+        android:background="@null"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sport_spinner"
+        android:layout_alignBottom="@id/Sport"
+        android:layout_toRightOf="@id/Sport"
+        />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/team_spinner"
+        android:layout_alignBottom="@+id/Team"
+        android:layout_toRightOf="@+id/Team"
+        />
 
 </RelativeLayout>
